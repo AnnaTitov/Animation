@@ -1,0 +1,65 @@
+@import 'base/base';
+@import 'base/mixins';
+@import 'base/variables';
+
+
+body{
+    background-color: coral;
+}
+.blok {
+    @include box(100%, 200px, $color_blok);
+    display: flex;
+    flex-flow: row;
+    margin-top: 200px;
+}
+  .mini_blok {
+    @include box(100px, 200px, $color_mini_blok);
+    display: flex;
+    justify-content: center;
+    outline: 1px solid gray;
+    & a i {
+        font-size: 50px;
+        color: blanchedalmond;
+        margin: auto;
+        text-align: center;
+        line-height: 200px;
+    }
+    &:hover {
+        @include box(500px, 200px, $color_blok_hover);
+    }
+    &:hover .Dribble{
+        background-color: blue;
+    }
+    &:hover .tumblr{
+        background-color: rgb(58, 58, 80);
+    }
+    &:hover .Instagram{
+        background-color: rgb(121, 231, 121);
+    }
+    &:hover .LinkedIn{
+        background-color: rgb(14, 92, 122);
+    }
+    &:hover .Facebook{
+        background-color: rgb(56, 56, 136);
+    }
+    &:hover .info {
+        display: block;
+    }
+}
+.icon {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    & a i{
+        font-size: 28px;
+    }
+}
+.info {
+    display: none;
+    background-color: $color_info;
+    width: 400px;
+    padding: 50px;
+    & h4{
+        font-size: 24px;
+    }
+}
